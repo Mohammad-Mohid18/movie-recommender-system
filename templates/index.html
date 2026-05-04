@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies Recommender</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="navbar">
+    <div class="nav-links">
+        <a href="/watchlist">Watchlist</a>
+    </div>
+    <!-- userBox is populated by auth.js once Firebase confirms the session -->
+    <div id="userBox" class="user-box"></div>
+</div>
+
+<div class="container">
+
+    <h1>🎬 Movies Recommender</h1>
+    <p>Find Similar Movies &amp; Shows</p>
+
+    <form method="POST">
+        <input type="text" name="movie" placeholder="Enter movie name..." required>
+        <button type="submit">Recommend</button>
+    </form>
+
+    {% if movie_name %}
+        <h2>Results for "{{ movie_name }}"</h2>
+    {% endif %}
+
+    <div class="results">
+        {% for movie in recommendations %}
+            <div class="card">
+                {{ movie }}
+
+                <br><br>
+
+                <button onclick="addToWatchlist('{{ movie }}')">
+                    + Add to Watchlist
+                </button>
+
+            </div>
+        {% endfor %}
+    </div>
+
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+<script src="{{ url_for('static', filename='js/firebase.js') }}"></script>
+<script src="{{ url_for('static', filename='js/auth.js') }}"></script>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+</body>
+</html>

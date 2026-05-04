@@ -1,0 +1,167 @@
+/* ── watchlist.css – Watchlist page ──────────────────────────────────────── */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: #0f0f1a;
+    color: #e2e2f0;
+    min-height: 100vh;
+}
+
+/* ── Navbar ───────────────────────────────────────────────────────────────── */
+
+.wl-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background: #16162a;
+    border-bottom: 1px solid rgba(229, 9, 20, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.wl-home-link {
+    color: #e50914;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: opacity 0.2s;
+}
+
+.wl-home-link:hover { opacity: 0.75; }
+
+/* userBox injected by auth.js */
+.user-box {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.88rem;
+    color: #aaaacc;
+}
+
+.user-box .user-email { color: #e2e2f0; }
+
+.user-box .logout-btn {
+    padding: 0.35rem 0.85rem;
+    background: transparent;
+    border: 1px solid #e50914;
+    color: #e50914;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.82rem;
+    font-weight: 600;
+    transition: background 0.2s, color 0.2s;
+}
+
+.user-box .logout-btn:hover {
+    background: #e50914;
+    color: #fff;
+}
+
+/* ── Container ────────────────────────────────────────────────────────────── */
+
+.wl-container {
+    max-width: 700px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.wl-heading {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.3rem;
+}
+
+.wl-subheading {
+    color: #8888aa;
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+}
+
+/* ── List ─────────────────────────────────────────────────────────────────── */
+
+.wl-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.watchlist-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #16162a;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    transition: border-color 0.2s;
+}
+
+.watchlist-item:hover {
+    border-color: rgba(229, 9, 20, 0.3);
+}
+
+.wl-title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #e2e2f0;
+}
+
+.wl-remove-btn {
+    padding: 0.35rem 0.9rem;
+    background: transparent;
+    border: 1px solid rgba(229, 9, 20, 0.5);
+    color: #e50914;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.82rem;
+    font-weight: 600;
+    transition: background 0.2s, color 0.2s, opacity 0.2s;
+    white-space: nowrap;
+}
+
+.wl-remove-btn:hover {
+    background: #e50914;
+    color: #fff;
+}
+
+/* ── States ───────────────────────────────────────────────────────────────── */
+
+.loading-msg, .error-msg {
+    color: #8888aa;
+    font-size: 0.95rem;
+    padding: 1rem 0;
+}
+
+.empty-watchlist {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: #8888aa;
+}
+
+.empty-watchlist p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.browse-link {
+    display: inline-block;
+    padding: 0.6rem 1.4rem;
+    background: #e50914;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+
+.browse-link:hover { background: #c2060f; }

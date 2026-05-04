@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Watchlist – Movies Recommender</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/watchlist.css') }}">
+</head>
+<body>
+
+<div class="wl-navbar">
+    <a href="/" class="wl-home-link">← Back to Movies</a>
+    <div id="userBox" class="user-box"></div>
+</div>
+
+<div class="wl-container">
+
+    <h1 class="wl-heading">🎬 My Watchlist</h1>
+    <p class="wl-subheading">Movies and shows you want to watch</p>
+
+    <div id="watchlistContainer" class="wl-list">
+        <!-- Populated by app.js after Firebase auth confirms the session -->
+        <p class="loading-msg">Loading…</p>
+    </div>
+
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+<script src="{{ url_for('static', filename='js/firebase.js') }}"></script>
+<script src="{{ url_for('static', filename='js/auth.js') }}"></script>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+</body>
+</html>

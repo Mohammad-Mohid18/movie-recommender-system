@@ -1,0 +1,143 @@
+/* ── auth.css – Login & Signup pages ─────────────────────────────────────── */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: #0f0f1a;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e2e2f0;
+
+    /* Subtle background pattern */
+    background-image:
+        radial-gradient(ellipse at 20% 50%, rgba(229, 9, 20, 0.08) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 20%, rgba(229, 9, 20, 0.05) 0%, transparent 50%);
+}
+
+/* ── Card ─────────────────────────────────────────────────────────────────── */
+
+.auth-wrapper {
+    width: 100%;
+    padding: 1rem;
+}
+
+.auth-card {
+    background: #16162a;
+    border: 1px solid rgba(229, 9, 20, 0.2);
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    max-width: 420px;
+    margin: 0 auto;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* ── Logo / Title ─────────────────────────────────────────────────────────── */
+
+.auth-logo {
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.auth-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 0.35rem;
+}
+
+.auth-subtitle {
+    font-size: 0.9rem;
+    color: #8888aa;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* ── Inputs ───────────────────────────────────────────────────────────────── */
+
+.input-group {
+    margin-bottom: 1.1rem;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #aaaacc;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.4rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: #1e1e35;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #e2e2f0;
+    font-size: 0.97rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-group input::placeholder {
+    color: #55556a;
+}
+
+.input-group input:focus {
+    border-color: #e50914;
+    box-shadow: 0 0 0 3px rgba(229, 9, 20, 0.18);
+}
+
+/* ── Button ───────────────────────────────────────────────────────────────── */
+
+.auth-btn {
+    width: 100%;
+    padding: 0.85rem;
+    margin-top: 0.6rem;
+    background: #e50914;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    letter-spacing: 0.03em;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.auth-btn:hover {
+    background: #c2060f;
+}
+
+.auth-btn:active {
+    transform: scale(0.98);
+}
+
+/* ── Footer link ──────────────────────────────────────────────────────────── */
+
+.auth-footer {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.88rem;
+    color: #8888aa;
+}
+
+.auth-footer a {
+    color: #e50914;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
