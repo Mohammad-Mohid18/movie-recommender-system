@@ -54,48 +54,62 @@ A full-stack **Movie Recommender Web Application** that provides personalized mo
 ## 📂 Project Structure
 
 ```
-# Project Structure
-
-```
-├── data
+movie-recommender-system/
+│
+├── data/
 │   ├── netflix_cleaned.csv
 │   ├── netflix_features.csv
 │   └── netflix_titles.csv
-├── models
+│
+├── models/
 │   ├── netflix_data.pkl
 │   └── similarity.pkl
-├── notebook
+│
+├── notebook/
 │   ├── data_cleaning.ipynb
 │   ├── feature_engneering.ipynb
 │   └── vectorization.ipynb
-├── src
-│   ├── __pycache__
+│
+├── src/
 │   ├── __init__.py
 │   └── recomendation_function.py
-├── static
-│   ├── css
+│
+├── static/
+│   ├── css/
 │   │   ├── auth.css
 │   │   ├── style.css
 │   │   └── watchlist.css
-│   ├── images
+│   │
+│   ├── images/
 │   │   ├── FirebaseStoring.png
 │   │   ├── Login-Signup.png
 │   │   ├── Main.png
 │   │   └── Watchlist.png
-│   └── js
+│   │
+│   └── js/
 │       ├── app.js
 │       ├── auth.js
 │       └── firebase.js
-├── templates
+│
+├── templates/
 │   ├── index.html
 │   ├── login.html
 │   ├── signup.html
 │   └── watchlist.html
-├── venv
+│
 ├── app.py
-├── README.md
-└── requirements.txt
+├── requirements.txt
+└── README.md
 ```
+
+---
+
+### 📌 Notes
+
+* `models/similarity.pkl` is generated using `vectorization.ipynb`
+* `venv/` is excluded from the repository via `.gitignore`
+* `__pycache__/` is automatically generated and not included
+
 
 ```
 
